@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
+    background-color: #efeae3;
 }
 
 html, body {
@@ -13,3 +14,107 @@ html, body {
     width: 100%;
 }
 
+
+nav a {
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+nav a::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0%;
+    bottom: -100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    z-index: -1;
+    transition: ease-out 200ms;
+}
+
+
+nav a:hover::before {
+    bottom: 0;
+}
+
+nav a:hover {
+    color: white;
+}
+
+video {
+    position: relative;
+    z-index: 20;
+}
+
+
+#animation {
+    position: relative;
+    z-index: 0;
+    translate: 1100px 50px;
+}
+
+#hero1 {
+    height: 500px;
+    width: 500px;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(30px);
+}
+
+
+
+#hero2 {
+    height: 400px;
+    width: 500px;
+    background-color: orangered;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(30px);
+}
+#hero3 {
+    height: 500px;
+    width: 450px;
+    background-color: orangered;
+    border-radius: 60%;
+    position: absolute;
+    filter: blur(30px);
+}
+
+
+
+
+
+
+/* 
+nav a {
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
+
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    bottom: -100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: ease-out 200ms;
+    z-index: -1;
+}
+
+nav a:hover::after {
+     bottom: 0%;
+}
+
+nav div a:hover {
+    color: white;
+} */
